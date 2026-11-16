@@ -12,33 +12,33 @@ import leaderImg from './assets/leader.png'
 import designerImg from './assets/designer.png'
 
 // ===== GALLERY PHOTOS - OYA GE PHOTOS =====
-import p1_1 from './assets/gallery/web_cover.jpg'
-import p1_2 from './assets/gallery/website1.jpeg'
-import p1_3 from './assets/gallery/website2.jpeg'
-import p1_4 from './assets/gallery/website3.jpeg'
+import p1_1 from './assets/gallery/web_cover.JPG'
+import p1_2 from './assets/gallery/website1.JPEG'
+import p1_3 from './assets/gallery/website2.JPEG'
+import p1_4 from './assets/gallery/website3.JPEG'
 
-import p2_1 from './assets/gallery/pos_cover.jpg'
-import p2_2 from './assets/gallery/pos1.png'
-import p2_3 from './assets/gallery/pos2.png'
-import p2_4 from './assets/gallery/pos3.png'
+import p2_1 from './assets/gallery/pos_cover.JPG'
+import p2_2 from './assets/gallery/pos1.PNG'
+import p2_3 from './assets/gallery/pos2.PNG'
+import p2_4 from './assets/gallery/pos3.PNG'
 
-import p3_1 from './assets/gallery/clothing_cover.jpg'
+import p3_1 from './assets/gallery/clothing_cover.JPG'
 import p3_2 from './assets/gallery/cloths1.JPG'
-import p3_3 from './assets/gallery/cloths2.jpeg'
+import p3_3 from './assets/gallery/cloths2.JPEG'
 import p3_4 from './assets/gallery/cloths3.JPG'
 
-import p4_1 from './assets/gallery/logo_cover.jpg'
-import p4_2 from './assets/gallery/graphics1.jpeg'
-import p4_3 from './assets/gallery/graphics2.jpeg'
+import p4_1 from './assets/gallery/logo_cover.JPG'
+import p4_2 from './assets/gallery/graphics1.JPEG'
+import p4_3 from './assets/gallery/graphics2.JPEG'
 
-import p5_1 from './assets/gallery/Automation_cover.jpg'
-import p5_2 from './assets/gallery/business1.png'
+import p5_1 from './assets/gallery/Automation_cover.JPG'
+import p5_2 from './assets/gallery/business1.PNG'
 import p5_3 from './assets/gallery/business2.png'
 
-import p6_1 from './assets/gallery/product_cover.jpg'
-import p6_2 from './assets/gallery/products1.jpeg'
-import p6_3 from './assets/gallery/products2.jpeg'
-import p6_4 from './assets/gallery/products3.jpeg'
+import p6_1 from './assets/gallery/product_cover.JPG'
+import p6_2 from './assets/gallery/products1.JPEG'
+import p6_3 from './assets/gallery/products2.JPEG'
+import p6_4 from './assets/gallery/products3.JPEG'
 
 const BG = {
   services: servicesBg,
