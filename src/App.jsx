@@ -65,7 +65,7 @@ function App() {
   // ===== WHATSAPP - WENAMA MESSAGES =====
   const num = "94762646816"
   const wa = (msg) => `https://wa.me/${num}?text=${encodeURIComponent(msg)}`
-  const whatsapp = wa("Hi NexaCore Digital! Mata Free Quote ekak ganna one.")
+  const whatsapp = wa("Hi NexaCore Digital! I'm interested in your services and would love a free quote.")
   const waGeneral = whatsapp
   const waWebsite = wa("Hi NexaCore Digital! I'm looking to get a website built and would love a free quote.")
   const waPOS = wa("Hi NexaCore Digital! I want to know about your POS system.")
@@ -117,8 +117,8 @@ function App() {
   ]
 
   const experts = [
-    { initials: "HN", name: "Hiruka Nethwin", role: "Founder & Lead Developer", cat: "Development" },
-    { initials: "CB", name: "Chanuka Bandara", role: "Main Graphic Designer", cat: "Creative" },
+    { initials: "SL", name: "Sanula Lakvin", role: " Developer", cat: "Development" },
+   
   ]
   const filteredExperts = expertFilter === "All" ? experts : experts.filter(e => e.cat === expertFilter)
 
