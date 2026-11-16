@@ -61,7 +61,24 @@ function App() {
   const [highlight, setHighlight] = useState(null)
   const [selectedMember, setSelectedMember] = useState(null)
   const [expertFilter, setExpertFilter] = useState("All")
-  const whatsapp = "https://wa.me/94762646816?text=Hi%20NexaCore%20Digital!%20Mata%20website%20ekak%20hadaganna%20one."
+
+  // ===== WHATSAPP - WENAMA MESSAGES =====
+  const num = "94762646816"
+  const wa = (msg) => `https://wa.me/${num}?text=${encodeURIComponent(msg)}`
+  const whatsapp = wa("Hi NexaCore Digital! Mata Free Quote ekak ganna one.")
+  const waGeneral = whatsapp
+  const waWebsite = wa("Hi NexaCore Digital! I'm looking to get a website built and would love a free quote.")
+  const waPOS = wa("Hi NexaCore Digital! I want to know about your POS system.")
+  const waLogo = wa("Hi NexaCore Digital! I'm looking for logo and branding design services and would love a free quote.")
+  const waSocial = wa("Hi NexaCore Digital! I'm interested in Social Media Management for my business and would love more details.")
+  const waGraphic = wa("Hi NexaCore Digital! I'm looking for graphic and creative design services and would love a free quote.")
+  const waMarketing = wa("Hi NexaCore Digital! I'm interested in Digital Marketing for my business and would love more details.")
+  const waPhoto = wa("Hi NexaCore Digital! I'm interested in Photography & Video Production for my brand and would love more details.")
+  const waAI = wa("Hi NexaCore Digital! I'm interested in AI & Business Automation for my business and would love more details.")
+  const waStarter = wa("Hi NexaCore Digital! I'm interested in the STARTER Package (Rs. 25,000)—let's get started!")
+  const waBusiness = wa("Hi NexaCore Digital! I'm interested in the BUSINESS Package (Rs. 50,000)—let's get started!")
+  const waPremium = wa("Hi NexaCore Digital! I'm interested in the PREMIUM Package (Rs. 90,000+) and would love to discuss my project requirements.")
+  const waJoin = wa("Hi NexaCore Digital! I'm interested in joining your team and would love to share my skills/portfolio.")
 
   const goToService = (id) => {
     setHighlight(id)
@@ -102,9 +119,6 @@ function App() {
   const experts = [
     { initials: "HN", name: "Hiruka Nethwin", role: "Founder & Lead Developer", cat: "Development" },
     { initials: "CB", name: "Chanuka Bandara", role: "Main Graphic Designer", cat: "Creative" },
-   // { initials: "MM", name: "Add Expert Name", role: "Marketing Manager", cat: "Marketing" },
-    //{ initials: "PH", name: "Add Expert Name", role: "Photographer", cat: "Creative" },
-    //{ initials: "BS", name: "Add Expert Name", role: "Branding Specialist", cat: "Creative" },
   ]
   const filteredExperts = expertFilter === "All" ? experts : experts.filter(e => e.cat === expertFilter)
 
@@ -134,7 +148,7 @@ function App() {
           <a href="#blog">Blog</a>
         </div>
         <div className="header-right">
-          <a className="btn-small" href={whatsapp} target="_blank">
+          <a className="btn-small" href={waGeneral} target="_blank">
           <svg className="wa-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           WhatsApp
         </a>
@@ -149,7 +163,7 @@ function App() {
         <h1>Your Business.<br/><span>Next Level.</span></h1>
         <p className="sub">We build stunning, high-selling digital solutions through Design, Branding, Development, Digital Marketing and AI Automation to grow your business.</p>
         <div className="hero-btns">
-          <a className="btn-white" href={whatsapp} target="_blank">Get Free Quote →</a>
+          <a className="btn-white" href={waGeneral} target="_blank">Get Free Quote →</a>
           <a className="btn-outline" href="#services">Our Services</a>
         </div>
       </header>
@@ -157,14 +171,14 @@ function App() {
       <section id="services" style={bgStyle(BG.services)}>
         <h2>What We Do ? </h2>
         <div className="grid">
-          <div className={highlight === 'service-website' ? 'card card-active' : 'card'} id="service-website"><div className="icon">🌐</div><h3>Website Development</h3><p>Business, Shop, Portfolio, E-commerce website.</p><span>From Rs. 25,000</span></div>
-          <div className={highlight === 'service-pos' ? 'card card-active' : 'card'} id="service-pos"><div className="icon">🧾</div><h3>POS System</h3><p>Billing, Stock, Credit, Report thiyena POS system.</p><span>From Rs. 35,000</span></div>
-          <div className={highlight === 'service-branding' ? 'card card-active' : 'card'} id="service-branding"><div className="icon">✒️</div><h3>Logo & Branding</h3><p>Logo, Business Card, Banner - brand eka premium karanna.</p><span>From Rs. 8,000</span></div>
-          <div className={highlight === 'service-social' ? 'card card-active' : 'card'} id="service-social"><div className="icon">📱</div><h3>Social Media</h3><p>Facebook / Instagram Post Design + Page Setup.</p><span>From Rs. 15,000 / month</span></div>
-          <div className={highlight === 'service-graphic' ? 'card card-active' : 'card'} id="service-graphic"><div className="icon">🎨</div><h3>Graphic & Creative Design</h3><p>Promotional Posters, Banners, Menus, Catalogues & Presentations.</p><span>From Rs. 1500</span></div>
-          <div className={highlight === 'service-marketing' ? 'card card-active' : 'card'} id="service-marketing"><div className="icon">📈</div><h3>Digital Marketing & Social Media</h3><p>Social Media Management, Content Strategy, Meta Ads, Google Ads, SEO, Email & Campaigns.</p><span>From Rs. 10,000 / month</span></div>
-          <div className={highlight === 'service-photo' ? 'card card-active' : 'card'} id="service-photo"><div className="icon">🎬</div><h3>Photography & Video Production</h3><p>Product & Corporate Photography, Event Photography & Videography, Promotional & Brand Videos.</p><span>From Rs. 5,000</span></div>
-          <div className={highlight === 'service-ai' ? 'card card-active' : 'card'} id="service-ai"><div className="icon">🤖</div><h3>AI & Business Automation</h3><p>AI Chatbot Development, WhatsApp Business Automation, Workflow & Process Automation & Third-party Software Integration.</p><span>From Rs. 10,000</span></div>
+          <div className={highlight === 'service-website' ? 'card card-active' : 'card'} id="service-website"><div className="icon">🌐</div><h3>Website Development</h3><p>Business, Shop, Portfolio, E-commerce website.</p><span>From Rs. 25,000</span><br/><br/><a className="btn-small" href={waWebsite} target="_blank">Get Website →</a></div>
+          <div className={highlight === 'service-pos' ? 'card card-active' : 'card'} id="service-pos"><div className="icon">🧾</div><h3>POS System</h3><p>Billing, Stock, Credit, Report thiyena POS system.</p><span>From Rs. 35,000</span><br/><br/><a className="btn-small" href={waPOS} target="_blank">Get POS →</a></div>
+          <div className={highlight === 'service-branding' ? 'card card-active' : 'card'} id="service-branding"><div className="icon">✒️</div><h3>Logo & Branding</h3><p>Logo, Business Card, Banner - brand eka premium karanna.</p><span>From Rs. 8,000</span><br/><br/><a className="btn-small" href={waLogo} target="_blank">Get Logo →</a></div>
+          <div className={highlight === 'service-social' ? 'card card-active' : 'card'} id="service-social"><div className="icon">📱</div><h3>Social Media</h3><p>Facebook / Instagram Post Design + Page Setup.</p><span>From Rs. 15,000 / month</span><br/><br/><a className="btn-small" href={waSocial} target="_blank">Get Started →</a></div>
+          <div className={highlight === 'service-graphic' ? 'card card-active' : 'card'} id="service-graphic"><div className="icon">🎨</div><h3>Graphic & Creative Design</h3><p>Promotional Posters, Banners, Menus, Catalogues & Presentations.</p><span>From Rs. 1500</span><br/><br/><a className="btn-small" href={waGraphic} target="_blank">Get Design →</a></div>
+          <div className={highlight === 'service-marketing' ? 'card card-active' : 'card'} id="service-marketing"><div className="icon">📈</div><h3>Digital Marketing & Social Media</h3><p>Social Media Management, Content Strategy, Meta Ads, Google Ads, SEO, Email & Campaigns.</p><span>From Rs. 10,000 / month</span><br/><br/><a className="btn-small" href={waMarketing} target="_blank">Get Marketing →</a></div>
+          <div className={highlight === 'service-photo' ? 'card card-active' : 'card'} id="service-photo"><div className="icon">🎬</div><h3>Photography & Video Production</h3><p>Product & Corporate Photography, Event Photography & Videography, Promotional & Brand Videos.</p><span>From Rs. 5,000</span><br/><br/><a className="btn-small" href={waPhoto} target="_blank">Book Shoot →</a></div>
+          <div className={highlight === 'service-ai' ? 'card card-active' : 'card'} id="service-ai"><div className="icon">🤖</div><h3>AI & Business Automation</h3><p>AI Chatbot Development, WhatsApp Business Automation, Workflow & Process Automation & Third-party Software Integration.</p><span>From Rs. 10,000</span><br/><br/><a className="btn-small" href={waAI} target="_blank">Get Automation →</a></div>
         </div>
       </section>
 
@@ -243,7 +257,7 @@ function App() {
               <div className="join-plus">+</div>
               <h3>Join Our Team</h3>
               <p>Have a skill that could make a difference? Let's talk.</p>
-              <a href={whatsapp} className="join-btn">Apply Now</a>
+              <a href={waJoin} className="join-btn">Apply Now</a>
             </div>
           </div>
         </div>
@@ -253,7 +267,7 @@ function App() {
         <h2>Contact Us & Follow Us</h2>
         <p className="section-sub">Want to do a project? Talk to us!</p>
         <div className="social-grid">
-          <a href="https://wa.me/94762646816" target="_blank" className="social-card">
+          <a href={waGeneral} target="_blank" className="social-card">
             <svg className="social-icon wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
             <b>WhatsApp</b><span>+94 76 264 6816</span>
           </a>
@@ -324,9 +338,9 @@ function App() {
       <section id="pricing" style={bgStyle(BG.pricing)}>
         <h2>Sample Pricing</h2>
         <div className="grid">
-          <div className="price-card"><h3>STARTER</h3><h2>Rs. 25,000</h2><p>✔ 1 Page Website<br/>✔ 8 Posts<br/>✔ Reels<br/>✔ Basic Management<br/>✔ Monthly Report</p><a className="btn-outline" href={whatsapp} target="_blank">Choose Starter</a></div>
-          <div className="price-card hot"><span className="badge">MOST POPULAR</span><h3>BUSINESS</h3><h2>Rs. 50,000</h2><p>✔ 5 Social Media Management<br/>✔ Content Creation<br/>✔ Reels<br/>✔ Meta ads management<br/>✔ Google Business management<br/>✔ Analytics</p><a className="btn-white" href={whatsapp} target="_blank">Choose Business</a></div>
-          <div className="price-card"><h3>PREMIUM</h3><h2>Rs. 90,000+</h2><p>✔ Complete Digital marketing<br/>✔ Content Creation<br/>✔ Advertising<br/>✔ Website Maintainence<br/>✔ SEO<br/>✔ Automation<br/>✔ Monthly Strategy</p><a className="btn-outline" href={whatsapp} target="_blank">Choose Premium</a></div>
+          <div className="price-card"><h3>STARTER</h3><h2>Rs. 25,000</h2><p>✔ 1 Page Website<br/>✔ 8 Posts<br/>✔ Reels<br/>✔ Basic Management<br/>✔ Monthly Report</p><a className="btn-outline" href={waStarter} target="_blank">Choose Starter</a></div>
+          <div className="price-card hot"><span className="badge">MOST POPULAR</span><h3>BUSINESS</h3><h2>Rs. 50,000</h2><p>✔ 5 Social Media Management<br/>✔ Content Creation<br/>✔ Reels<br/>✔ Meta ads management<br/>✔ Google Business management<br/>✔ Analytics</p><a className="btn-white" href={waBusiness} target="_blank">Choose Business</a></div>
+          <div className="price-card"><h3>PREMIUM</h3><h2>Rs. 90,000+</h2><p>✔ Complete Digital marketing<br/>✔ Content Creation<br/>✔ Advertising<br/>✔ Website Maintainence<br/>✔ SEO<br/>✔ Automation<br/>✔ Monthly Strategy</p><a className="btn-outline" href={waPremium} target="_blank">Choose Premium</a></div>
         </div>
       </section>
 
@@ -343,7 +357,7 @@ function App() {
       <section className="cta" style={{display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", textAlign:"center"}}>
         <h2>Let's Build Something Great</h2>
         <p>Message us now to get a free quote.</p>
-        <a href="https://wa.me/94762646816" target="_blank" rel="noreferrer" className="btn-whatsapp">
+        <a href={waGeneral} target="_blank" rel="noreferrer" className="btn-whatsapp">
           <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.11.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.18-1.42-.08-.12-.28-.2-.57-.34zM12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 9.88 9.89c0 5.45-4.44 9.88-9.89 9.88zm8.42-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.9 11.9 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.47-8.41z"/></svg>
           WhatsApp
         </a>
