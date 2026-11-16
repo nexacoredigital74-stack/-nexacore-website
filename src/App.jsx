@@ -334,9 +334,9 @@ function App() {
         <h2>Our Blog</h2>
         <p className="section-sub">Tips & Ideas to Grow Your Business</p>
         <div className="grid">
-          <div className="card"><div className="icon">💡</div><h3>How Does a Website Help Your Business Grow?</h3><p>Online inne nathi business ekak customers la godak nathi wenawa. Website ekakin trust, sales okkoma wadi wenawa.</p><span>Read More →</span></div>
-          <div className="card"><div className="icon">🧾</div><h3>Simplify Your Shop Operations with a POS System</h3><p>Billing, Stock, Credit okkoma ekama thanakin - poth wala liyanna one na.</p><span>Read More →</span></div>
-          <div className="card"><div className="icon">🎨</div><h3>A Good Logo Makes Your Brand Look Premium</h3><p>Customer ta mathakayen thiyena logo ekak thamai brand eka.</p><span>Read More →</span></div>
+          <div className="card"><div className="icon">💡</div><h3>How Does a Website Help Your Business Grow?</h3><p>A business without an online presence misses out on countless customers. Having a professional website builds instant trust and drives more sales.</p><span>Read More →</span></div>
+          <div className="card"><div className="icon">🧾</div><h3>Simplify Your Shop Operations with a POS System</h3><p>Track every sale, stock update, and credit balance from a single dashboard—eliminating manual paperwork and human errors.</p><span>Read More →</span></div>
+          <div className="card"><div className="icon">🎨</div><h3>A Good Logo Makes Your Brand Look Premium</h3><p>A great brand is built on a distinctive logo that leaves a lasting impression on every customer</p><span>Read More →</span></div>
         </div>
       </section>
 
