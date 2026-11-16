@@ -23,9 +23,9 @@ import p2_3 from './assets/gallery/pos2.png'
 import p2_4 from './assets/gallery/pos3.png'
 
 import p3_1 from './assets/gallery/clothing_cover.jpg'
-import p3_2 from './assets/gallery/cloths1.jpg'
+import p3_2 from './assets/gallery/cloths1.JPG'
 import p3_3 from './assets/gallery/cloths2.jpeg'
-import p3_4 from './assets/gallery/cloths3.jpg'
+import p3_4 from './assets/gallery/cloths3.JPG'
 
 import p4_1 from './assets/gallery/logo_cover.jpg'
 import p4_2 from './assets/gallery/graphics1.jpeg'
