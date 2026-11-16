@@ -340,7 +340,7 @@ function App() {
         </div>
       </section>
 
-      <section className="cta">
+      <section className="cta" style={{display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", textAlign:"center"}}>
         <h2>Let's Build Something Great</h2>
         <p>Message us now to get a free quote.</p>
         <a href="https://wa.me/94762646816" target="_blank" rel="noreferrer" className="btn-whatsapp">
