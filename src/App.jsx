@@ -118,6 +118,7 @@ function App() {
 
   const experts = [
     { initials: "SL", name: "Sanula Lakvin", role: " Developer", cat: "Development" },
+     { initials: "SS", name: "Savindi Shehara", role: "Creative Writer & Report Designer", cat: "Creative" },
    
   ]
   const filteredExperts = expertFilter === "All" ? experts : experts.filter(e => e.cat === expertFilter)
